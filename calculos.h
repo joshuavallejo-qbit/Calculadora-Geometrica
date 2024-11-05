@@ -1,34 +1,21 @@
-#ifndef CALCULOS_H
-#define CALCULOS_H
+#ifndef FIGURAS_H   
+#define FIGURAS_H
 
-// figuras planas
-double calcularAreaTriangulo();
-double calcularPerimetroTriangulo();
-double calcularAreaParalelogramo();
-double calcularPerimetroParalelogramo();
-double calcularAreaCuadrado();
-double calcularPerimetroCuadrado();
-double calcularAreaRectangulo();
-double calcularPerimetroRectangulo();
-double calcularAreaRombo();
-double calcularPerimetroRombo();
-double calcularAreaTrapecio();
-double calcularPerimetroTrapecio();
-double calcularAreaCirculo();
-double calcularPerimetroCirculo();
-double calcularAreaPoligonoRegular();
-double calcularPerimetroPoligonoRegular();
+// Funciones
+void menu(const char *usuario);
+void triangulo(const char *usuario);
+void paralelogramo(const char *usuario);
+void cuadrado(const char *usuario);
+void circulo(const char *usuario);
+void rectangulo(const char *usuario);
+void rombo(const char *usuario);
+void trapecio(const char *usuario);
+void poligono_regular(const char *usuario);
 
-//figuras 3D
-double calcularSuperficieCubo();
-double calcularVolumenCubo();
-double calcularSuperficieCuboide();
-double calcularVolumenCuboide();
-double calcularSuperficieCilindro();
-double calcularVolumenCilindro();
-double calcularSuperficieEsfera();
-double calcularVolumenEsfera();
-double calcularSuperficieCono();
-double calcularVolumenCono();
+void cubo(const char *usuario);
+void cuboide(const char *usuario);
+void cilindro_recto(const char *usuario);
+void esfera(const char *usuario);
+void cono_circular_recto(const char *usuario);
 
 #endif

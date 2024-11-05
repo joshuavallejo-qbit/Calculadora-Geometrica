@@ -1,15 +1,32 @@
+# Definimos el ejecutable final
+TARGET = programa
 
-main: main.o datos.o calculos.o
-    -o main main.o datos.o calculos.o
+# Archivos objeto necesarios para la compilación
+OBJS = main.o datos.o calculos.o
 
+# Compilador y banderas de compilación
+CC = gcc
+CFLAGS = -Wall -g
+
+# Regla principal para compilar el proyecto completo
+all: $(TARGET)
+
+# Regla para generar el ejecutable
+$(TARGET): $(OBJS)
+    $(CC) $(CFLAGS) -o $(TARGET) $(OBJS)
+
+# Regla para compilar main.o
 main.o: main.c datos.h calculos.h
-    -c main.c
+    $(CC) $(CFLAGS) -c main.c
 
+# Regla para compilar datos.o
 datos.o: datos.c datos.h
-    -c datos.c
+    $(CC) $(CFLAGS) -c datos.c
 
+# Regla para compilar calculos.o
 calculos.o: calculos.c calculos.h
-    -c calculos.c
+    $(CC) $(CFLAGS) -c calculos.c
 
+# Regla de limpieza
 clean:
-	rm -f *.o *.s main
+    rm -f $(OBJS) $(TARGET)

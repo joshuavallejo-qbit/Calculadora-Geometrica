@@ -1,6 +1,8 @@
 {
     "files.associations": {
-        "stdio.h": "c"
-    },
-    "C_Cpp.default.compilerPath": "C:\\msys64\\ucrt64\\bin\\gcc.exe"
+        "stdio.h": "c",
+        "datos.h": "c",
+        "time.h": "c",
+        "string.h": "c"
+    }
 }

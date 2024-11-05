@@ -1,0 +1,7 @@
+Mon Nov 04 00:37:18 2024: joshua – Ingreso exitoso al sistema
+Mon Nov 04 00:37:50 2024: joshua – Triangulo calculado
+Mon Nov 04 00:38:24 2024: joshua – Paralelogramo calculado
+Mon Nov 04 00:38:39 2024: joshua – Salida del sistema
+Mon Nov 04 00:40:00 2024: joshua – Ingreso fallido por usuario/clave erroneo
+Mon Nov 04 00:46:39 2024: joshua – Ingreso exitoso al sistema
+Mon Nov 04 00:46:42 2024: joshua – Salida del sistema

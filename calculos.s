@@ -74,626 +74,290 @@ _Z6printfPKcz:
 	popq	%rbp
 	ret
 	.seh_endproc
+	.section	.text$_ZSt4sqrtf,"x"
+	.linkonce discard
+	.globl	_ZSt4sqrtf
+	.def	_ZSt4sqrtf;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZSt4sqrtf
+_ZSt4sqrtf:
+.LFB140:
+	pushq	%rbp
+	.seh_pushreg	%rbp
+	movq	%rsp, %rbp
+	.seh_setframe	%rbp, 0
+	subq	$32, %rsp
+	.seh_stackalloc	32
+	.seh_endprologue
+	movss	%xmm0, 16(%rbp)
+	movss	16(%rbp), %xmm0
+	call	sqrtf
+	addq	$32, %rsp
+	popq	%rbp
+	ret
+	.seh_endproc
 	.section .rdata,"dr"
 	.align 8
 .LC0:
-	.ascii "Ingrese la base y la altura del tri\303\241ngulo: \0"
+	.ascii "Ingrese la base del tri\303\241ngulo: \0"
 .LC1:
-	.ascii "%lf %lf\0"
-	.text
-	.globl	_Z21calcularAreaTriangulov
-	.def	_Z21calcularAreaTriangulov;	.scl	2;	.type	32;	.endef
-	.seh_proc	_Z21calcularAreaTriangulov
-_Z21calcularAreaTriangulov:
-.LFB286:
-	pushq	%rbp
-	.seh_pushreg	%rbp
-	movq	%rsp, %rbp
-	.seh_setframe	%rbp, 0
-	subq	$48, %rsp
-	.seh_stackalloc	48
-	.seh_endprologue
-	leaq	.LC0(%rip), %rcx
-	call	_Z6printfPKcz
-	leaq	-16(%rbp), %rdx
-	leaq	-8(%rbp), %rax
-	movq	%rdx, %r8
-	movq	%rax, %rdx
-	leaq	.LC1(%rip), %rcx
-	call	_Z5scanfPKcz
-	movsd	-8(%rbp), %xmm1
-	movsd	.LC2(%rip), %xmm0
-	mulsd	%xmm0, %xmm1
-	movsd	-16(%rbp), %xmm0
-	mulsd	%xmm1, %xmm0
-	movq	%xmm0, %rax
-	movq	%rax, %xmm0
-	addq	$48, %rsp
-	popq	%rbp
-	ret
-	.seh_endproc
-	.section .rdata,"dr"
-	.align 8
-.LC3:
-	.ascii "Ingrese los tres lados del tri\303\241ngulo: \0"
-.LC4:
-	.ascii "%lf %lf %lf\0"
-	.text
-	.globl	_Z26calcularPerimetroTriangulov
-	.def	_Z26calcularPerimetroTriangulov;	.scl	2;	.type	32;	.endef
-	.seh_proc	_Z26calcularPerimetroTriangulov
-_Z26calcularPerimetroTriangulov:
-.LFB287:
-	pushq	%rbp
-	.seh_pushreg	%rbp
-	movq	%rsp, %rbp
-	.seh_setframe	%rbp, 0
-	subq	$64, %rsp
-	.seh_stackalloc	64
-	.seh_endprologue
-	leaq	.LC3(%rip), %rcx
-	call	_Z6printfPKcz
-	leaq	-24(%rbp), %rcx
-	leaq	-16(%rbp), %rdx
-	leaq	-8(%rbp), %rax
-	movq	%rcx, %r9
-	movq	%rdx, %r8
-	movq	%rax, %rdx
-	leaq	.LC4(%rip), %rcx
-	call	_Z5scanfPKcz
-	movsd	-8(%rbp), %xmm1
-	movsd	-16(%rbp), %xmm0
-	addsd	%xmm0, %xmm1
-	movsd	-24(%rbp), %xmm0
-	addsd	%xmm1, %xmm0
-	movq	%xmm0, %rax
-	movq	%rax, %xmm0
-	addq	$64, %rsp
-	popq	%rbp
-	ret
-	.seh_endproc
-	.section .rdata,"dr"
-	.align 8
-.LC5:
-	.ascii "Ingrese la base y la altura del paralelogramo: \0"
-	.text
-	.globl	_Z25calcularAreaParalelogramov
-	.def	_Z25calcularAreaParalelogramov;	.scl	2;	.type	32;	.endef
-	.seh_proc	_Z25calcularAreaParalelogramov
-_Z25calcularAreaParalelogramov:
-.LFB288:
-	pushq	%rbp
-	.seh_pushreg	%rbp
-	movq	%rsp, %rbp
-	.seh_setframe	%rbp, 0
-	subq	$48, %rsp
-	.seh_stackalloc	48
-	.seh_endprologue
-	leaq	.LC5(%rip), %rcx
-	call	_Z6printfPKcz
-	leaq	-16(%rbp), %rdx
-	leaq	-8(%rbp), %rax
-	movq	%rdx, %r8
-	movq	%rax, %rdx
-	leaq	.LC1(%rip), %rcx
-	call	_Z5scanfPKcz
-	movsd	-8(%rbp), %xmm1
-	movsd	-16(%rbp), %xmm0
-	mulsd	%xmm1, %xmm0
-	movq	%xmm0, %rax
-	movq	%rax, %xmm0
-	addq	$48, %rsp
-	popq	%rbp
-	ret
-	.seh_endproc
-	.section .rdata,"dr"
-	.align 8
-.LC6:
-	.ascii "Ingrese la base y el lado del paralelogramo: \0"
-	.text
-	.globl	_Z30calcularPerimetroParalelogramov
-	.def	_Z30calcularPerimetroParalelogramov;	.scl	2;	.type	32;	.endef
-	.seh_proc	_Z30calcularPerimetroParalelogramov
-_Z30calcularPerimetroParalelogramov:
-.LFB289:
-	pushq	%rbp
-	.seh_pushreg	%rbp
-	movq	%rsp, %rbp
-	.seh_setframe	%rbp, 0
-	subq	$48, %rsp
-	.seh_stackalloc	48
-	.seh_endprologue
-	leaq	.LC6(%rip), %rcx
-	call	_Z6printfPKcz
-	leaq	-16(%rbp), %rdx
-	leaq	-8(%rbp), %rax
-	movq	%rdx, %r8
-	movq	%rax, %rdx
-	leaq	.LC1(%rip), %rcx
-	call	_Z5scanfPKcz
-	movsd	-8(%rbp), %xmm1
-	movsd	-16(%rbp), %xmm0
-	addsd	%xmm1, %xmm0
-	addsd	%xmm0, %xmm0
-	movq	%xmm0, %rax
-	movq	%rax, %xmm0
-	addq	$48, %rsp
-	popq	%rbp
-	ret
-	.seh_endproc
-	.section .rdata,"dr"
-	.align 8
-.LC7:
-	.ascii "Ingrese el lado del cuadrado: \0"
-.LC8:
-	.ascii "%lf\0"
-	.text
-	.globl	_Z20calcularAreaCuadradov
-	.def	_Z20calcularAreaCuadradov;	.scl	2;	.type	32;	.endef
-	.seh_proc	_Z20calcularAreaCuadradov
-_Z20calcularAreaCuadradov:
-.LFB290:
-	pushq	%rbp
-	.seh_pushreg	%rbp
-	movq	%rsp, %rbp
-	.seh_setframe	%rbp, 0
-	subq	$48, %rsp
-	.seh_stackalloc	48
-	.seh_endprologue
-	leaq	.LC7(%rip), %rcx
-	call	_Z6printfPKcz
-	leaq	-8(%rbp), %rax
-	movq	%rax, %rdx
-	leaq	.LC8(%rip), %rcx
-	call	_Z5scanfPKcz
-	movsd	-8(%rbp), %xmm1
-	movsd	-8(%rbp), %xmm0
-	mulsd	%xmm1, %xmm0
-	movq	%xmm0, %rax
-	movq	%rax, %xmm0
-	addq	$48, %rsp
-	popq	%rbp
-	ret
-	.seh_endproc
-	.globl	_Z25calcularPerimetroCuadradov
-	.def	_Z25calcularPerimetroCuadradov;	.scl	2;	.type	32;	.endef
-	.seh_proc	_Z25calcularPerimetroCuadradov
-_Z25calcularPerimetroCuadradov:
-.LFB291:
-	pushq	%rbp
-	.seh_pushreg	%rbp
-	movq	%rsp, %rbp
-	.seh_setframe	%rbp, 0
-	subq	$48, %rsp
-	.seh_stackalloc	48
-	.seh_endprologue
-	leaq	.LC7(%rip), %rcx
-	call	_Z6printfPKcz
-	leaq	-8(%rbp), %rax
-	movq	%rax, %rdx
-	leaq	.LC8(%rip), %rcx
-	call	_Z5scanfPKcz
-	movsd	-8(%rbp), %xmm1
-	movsd	.LC9(%rip), %xmm0
-	mulsd	%xmm1, %xmm0
-	movq	%xmm0, %rax
-	movq	%rax, %xmm0
-	addq	$48, %rsp
-	popq	%rbp
-	ret
-	.seh_endproc
-	.section .rdata,"dr"
-	.align 8
-.LC10:
-	.ascii "Ingrese el largo del rect\303\241ngulo: \0"
-.LC11:
 	.ascii "%f\0"
 	.align 8
-.LC12:
-	.ascii "Ingrese el ancho del rect\303\241ngulo: \0"
+.LC2:
+	.ascii "Ingrese la altura del tri\303\241ngulo: \0"
+	.align 8
+.LC4:
+	.ascii "El \303\241rea del tri\303\241ngulo es: %.2f\12\0"
+	.align 8
+.LC5:
+	.ascii "El per\303\255metro del tri\303\241ngulo es: %.2f\12\0"
+.LC6:
+	.ascii "Triangulo calculado\0"
+	.align 8
+.LC7:
+	.ascii "\302\277Desea calcular otra figura? (Ingrese 1 para S\303\255, 9 para Salir)\0"
+.LC10:
+	.ascii "Adi\303\263s\12\0"
+	.align 8
+.LC11:
+	.ascii "La opci\303\263n elegida no es correcta. Menu Principal\12\0"
 	.text
-	.globl	_Z22calcularAreaRectangulov
-	.def	_Z22calcularAreaRectangulov;	.scl	2;	.type	32;	.endef
-	.seh_proc	_Z22calcularAreaRectangulov
-_Z22calcularAreaRectangulov:
-.LFB292:
-	pushq	%rbp
-	.seh_pushreg	%rbp
-	movq	%rsp, %rbp
-	.seh_setframe	%rbp, 0
-	subq	$48, %rsp
-	.seh_stackalloc	48
-	.seh_endprologue
-	leaq	.LC10(%rip), %rcx
-	call	_Z6printfPKcz
-	leaq	-8(%rbp), %rax
-	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
-	call	_Z5scanfPKcz
-	leaq	.LC12(%rip), %rcx
-	call	_Z6printfPKcz
-	leaq	-16(%rbp), %rax
-	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
-	call	_Z5scanfPKcz
-	movsd	-8(%rbp), %xmm1
-	movsd	-16(%rbp), %xmm0
-	mulsd	%xmm1, %xmm0
-	movq	%xmm0, %rax
-	movq	%rax, %xmm0
-	addq	$48, %rsp
-	popq	%rbp
-	ret
-	.seh_endproc
-	.globl	_Z27calcularPerimetroRectangulov
-	.def	_Z27calcularPerimetroRectangulov;	.scl	2;	.type	32;	.endef
-	.seh_proc	_Z27calcularPerimetroRectangulov
-_Z27calcularPerimetroRectangulov:
-.LFB293:
-	pushq	%rbp
-	.seh_pushreg	%rbp
-	movq	%rsp, %rbp
-	.seh_setframe	%rbp, 0
-	subq	$48, %rsp
-	.seh_stackalloc	48
-	.seh_endprologue
-	leaq	.LC10(%rip), %rcx
-	call	_Z6printfPKcz
-	leaq	-8(%rbp), %rax
-	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
-	call	_Z5scanfPKcz
-	leaq	.LC12(%rip), %rcx
-	call	_Z6printfPKcz
-	leaq	-16(%rbp), %rax
-	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
-	call	_Z5scanfPKcz
-	movsd	-8(%rbp), %xmm1
-	movsd	-16(%rbp), %xmm0
-	addsd	%xmm1, %xmm0
-	addsd	%xmm0, %xmm0
-	movq	%xmm0, %rax
-	movq	%rax, %xmm0
-	addq	$48, %rsp
-	popq	%rbp
-	ret
-	.seh_endproc
-	.section .rdata,"dr"
-	.align 8
-.LC13:
-	.ascii "Ingrese la diagonal mayor del rombo: \0"
-	.align 8
-.LC14:
-	.ascii "Ingrese la diagonal menor del rombo: \0"
-	.text
-	.globl	_Z17calcularAreaRombov
-	.def	_Z17calcularAreaRombov;	.scl	2;	.type	32;	.endef
-	.seh_proc	_Z17calcularAreaRombov
-_Z17calcularAreaRombov:
-.LFB294:
-	pushq	%rbp
-	.seh_pushreg	%rbp
-	movq	%rsp, %rbp
-	.seh_setframe	%rbp, 0
-	subq	$48, %rsp
-	.seh_stackalloc	48
-	.seh_endprologue
-	leaq	.LC13(%rip), %rcx
-	call	_Z6printfPKcz
-	leaq	-8(%rbp), %rax
-	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
-	call	_Z5scanfPKcz
-	leaq	.LC14(%rip), %rcx
-	call	_Z6printfPKcz
-	leaq	-16(%rbp), %rax
-	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
-	call	_Z5scanfPKcz
-	movsd	-8(%rbp), %xmm1
-	movsd	-16(%rbp), %xmm0
-	mulsd	%xmm1, %xmm0
-	movsd	.LC15(%rip), %xmm1
-	divsd	%xmm1, %xmm0
-	movq	%xmm0, %rax
-	movq	%rax, %xmm0
-	addq	$48, %rsp
-	popq	%rbp
-	ret
-	.seh_endproc
-	.globl	_Z22calcularPerimetroRombov
-	.def	_Z22calcularPerimetroRombov;	.scl	2;	.type	32;	.endef
-	.seh_proc	_Z22calcularPerimetroRombov
-_Z22calcularPerimetroRombov:
-.LFB295:
-	pushq	%rbp
-	.seh_pushreg	%rbp
-	movq	%rsp, %rbp
-	.seh_setframe	%rbp, 0
-	subq	$48, %rsp
-	.seh_stackalloc	48
-	.seh_endprologue
-	leaq	.LC13(%rip), %rcx
-	call	_Z6printfPKcz
-	leaq	-8(%rbp), %rax
-	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
-	call	_Z5scanfPKcz
-	leaq	.LC14(%rip), %rcx
-	call	_Z6printfPKcz
-	leaq	-16(%rbp), %rax
-	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
-	call	_Z5scanfPKcz
-	movsd	-8(%rbp), %xmm1
-	movsd	-8(%rbp), %xmm0
-	mulsd	%xmm0, %xmm1
-	movsd	-16(%rbp), %xmm2
-	movsd	-16(%rbp), %xmm0
-	mulsd	%xmm2, %xmm0
-	addsd	%xmm0, %xmm1
-	movq	%xmm1, %rax
-	movq	%rax, %xmm0
-	call	sqrt
-	addsd	%xmm0, %xmm0
-	movq	%xmm0, %rax
-	movq	%rax, %xmm0
-	addq	$48, %rsp
-	popq	%rbp
-	ret
-	.seh_endproc
-	.section .rdata,"dr"
-	.align 8
-.LC16:
-	.ascii "Ingrese la base mayor del trapecio: \0"
-	.align 8
-.LC17:
-	.ascii "Ingrese la base menor del trapecio: \0"
-	.align 8
-.LC18:
-	.ascii "Ingrese la altura del trapecio: \0"
-	.text
-	.globl	_Z20calcularAreaTrapeciov
-	.def	_Z20calcularAreaTrapeciov;	.scl	2;	.type	32;	.endef
-	.seh_proc	_Z20calcularAreaTrapeciov
-_Z20calcularAreaTrapeciov:
-.LFB296:
-	pushq	%rbp
-	.seh_pushreg	%rbp
-	movq	%rsp, %rbp
-	.seh_setframe	%rbp, 0
-	subq	$64, %rsp
-	.seh_stackalloc	64
-	.seh_endprologue
-	leaq	.LC16(%rip), %rcx
-	call	_Z6printfPKcz
-	leaq	-8(%rbp), %rax
-	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
-	call	_Z5scanfPKcz
-	leaq	.LC17(%rip), %rcx
-	call	_Z6printfPKcz
-	leaq	-16(%rbp), %rax
-	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
-	call	_Z5scanfPKcz
-	leaq	.LC18(%rip), %rcx
-	call	_Z6printfPKcz
-	leaq	-24(%rbp), %rax
-	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
-	call	_Z5scanfPKcz
-	movsd	-8(%rbp), %xmm1
-	movsd	-16(%rbp), %xmm0
-	addsd	%xmm0, %xmm1
-	movsd	-24(%rbp), %xmm0
-	mulsd	%xmm1, %xmm0
-	movsd	.LC15(%rip), %xmm1
-	divsd	%xmm1, %xmm0
-	movq	%xmm0, %rax
-	movq	%rax, %xmm0
-	addq	$64, %rsp
-	popq	%rbp
-	ret
-	.seh_endproc
-	.globl	_Z25calcularPerimetroTrapeciov
-	.def	_Z25calcularPerimetroTrapeciov;	.scl	2;	.type	32;	.endef
-	.seh_proc	_Z25calcularPerimetroTrapeciov
-_Z25calcularPerimetroTrapeciov:
-.LFB297:
-	pushq	%rbp
-	.seh_pushreg	%rbp
-	movq	%rsp, %rbp
-	.seh_setframe	%rbp, 0
-	subq	$80, %rsp
-	.seh_stackalloc	80
-	.seh_endprologue
-	leaq	.LC16(%rip), %rcx
-	call	_Z6printfPKcz
-	leaq	-32(%rbp), %rax
-	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
-	call	_Z5scanfPKcz
-	leaq	.LC17(%rip), %rcx
-	call	_Z6printfPKcz
-	leaq	-40(%rbp), %rax
-	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
-	call	_Z5scanfPKcz
-	leaq	.LC18(%rip), %rcx
-	call	_Z6printfPKcz
-	leaq	-48(%rbp), %rax
-	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
-	call	_Z5scanfPKcz
-	movsd	-32(%rbp), %xmm0
-	movsd	-40(%rbp), %xmm1
-	subsd	%xmm1, %xmm0
-	movsd	.LC15(%rip), %xmm1
-	divsd	%xmm1, %xmm0
-	movsd	%xmm0, -8(%rbp)
-	movsd	-48(%rbp), %xmm1
-	movsd	-48(%rbp), %xmm0
-	mulsd	%xmm0, %xmm1
-	movsd	-8(%rbp), %xmm0
-	mulsd	%xmm0, %xmm0
-	addsd	%xmm0, %xmm1
-	movq	%xmm1, %rax
-	movq	%rax, %xmm0
-	call	sqrt
-	movq	%xmm0, %rax
-	movq	%rax, -16(%rbp)
-	movsd	-16(%rbp), %xmm0
-	movsd	%xmm0, -24(%rbp)
-	movsd	-32(%rbp), %xmm1
-	movsd	-40(%rbp), %xmm0
-	addsd	%xmm1, %xmm0
-	addsd	-16(%rbp), %xmm0
-	addsd	-24(%rbp), %xmm0
-	movq	%xmm0, %rax
-	movq	%rax, %xmm0
-	addq	$80, %rsp
-	popq	%rbp
-	ret
-	.seh_endproc
-	.section .rdata,"dr"
-	.align 8
-.LC20:
-	.ascii "Ingrese el radio del c\303\255rculo: \0"
-	.text
-	.globl	_Z19calcularAreaCirculov
-	.def	_Z19calcularAreaCirculov;	.scl	2;	.type	32;	.endef
-	.seh_proc	_Z19calcularAreaCirculov
-_Z19calcularAreaCirculov:
-.LFB298:
-	pushq	%rbp
-	.seh_pushreg	%rbp
-	movq	%rsp, %rbp
-	.seh_setframe	%rbp, 0
-	subq	$48, %rsp
-	.seh_stackalloc	48
-	.seh_endprologue
-	movss	.LC19(%rip), %xmm0
-	movss	%xmm0, -4(%rbp)
-	leaq	.LC20(%rip), %rcx
-	call	_Z6printfPKcz
-	leaq	-16(%rbp), %rax
-	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
-	call	_Z5scanfPKcz
-	pxor	%xmm1, %xmm1
-	cvtss2sd	-4(%rbp), %xmm1
-	movsd	-16(%rbp), %xmm0
-	mulsd	%xmm0, %xmm1
-	movsd	-16(%rbp), %xmm0
-	mulsd	%xmm1, %xmm0
-	movq	%xmm0, %rax
-	movq	%rax, %xmm0
-	addq	$48, %rsp
-	popq	%rbp
-	ret
-	.seh_endproc
-	.globl	_Z24calcularPerimetroCirculov
-	.def	_Z24calcularPerimetroCirculov;	.scl	2;	.type	32;	.endef
-	.seh_proc	_Z24calcularPerimetroCirculov
-_Z24calcularPerimetroCirculov:
+	.globl	_Z9trianguloPKc
+	.def	_Z9trianguloPKc;	.scl	2;	.type	32;	.endef
+	.seh_proc	_Z9trianguloPKc
+_Z9trianguloPKc:
 .LFB299:
 	pushq	%rbp
 	.seh_pushreg	%rbp
 	movq	%rsp, %rbp
 	.seh_setframe	%rbp, 0
-	subq	$48, %rsp
-	.seh_stackalloc	48
+	subq	$64, %rsp
+	.seh_stackalloc	64
 	.seh_endprologue
-	movss	.LC19(%rip), %xmm0
-	movss	%xmm0, -4(%rbp)
-	leaq	.LC20(%rip), %rcx
+	movq	%rcx, 16(%rbp)
+	leaq	.LC0(%rip), %rcx
 	call	_Z6printfPKcz
 	leaq	-16(%rbp), %rax
 	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
+	leaq	.LC1(%rip), %rcx
 	call	_Z5scanfPKcz
-	movss	-4(%rbp), %xmm0
-	addss	%xmm0, %xmm0
-	pxor	%xmm1, %xmm1
-	cvtss2sd	%xmm0, %xmm1
-	movsd	-16(%rbp), %xmm0
-	mulsd	%xmm1, %xmm0
+	leaq	.LC2(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	-20(%rbp), %rax
+	movq	%rax, %rdx
+	leaq	.LC1(%rip), %rcx
+	call	_Z5scanfPKcz
+	movss	-16(%rbp), %xmm1
+	movss	-20(%rbp), %xmm0
+	mulss	%xmm1, %xmm0
+	movss	.LC3(%rip), %xmm1
+	divss	%xmm1, %xmm0
+	movss	%xmm0, -4(%rbp)
+	movss	-16(%rbp), %xmm1
+	movss	-16(%rbp), %xmm0
+	mulss	%xmm0, %xmm1
+	movss	-20(%rbp), %xmm2
+	movss	-20(%rbp), %xmm0
+	mulss	%xmm2, %xmm0
+	addss	%xmm0, %xmm1
+	movd	%xmm1, %eax
+	movd	%eax, %xmm0
+	call	_ZSt4sqrtf
+	movd	%xmm0, %eax
+	movl	%eax, -8(%rbp)
+	movss	-16(%rbp), %xmm1
+	movss	-20(%rbp), %xmm0
+	addss	%xmm1, %xmm0
+	movss	-8(%rbp), %xmm1
+	addss	%xmm1, %xmm0
+	movss	%xmm0, -12(%rbp)
+	pxor	%xmm0, %xmm0
+	cvtss2sd	-4(%rbp), %xmm0
 	movq	%xmm0, %rax
-	movq	%rax, %xmm0
-	addq	$48, %rsp
+	movq	%rax, %rdx
+	movq	%rdx, %xmm0
+	movapd	%xmm0, %xmm1
+	movq	%rax, %rdx
+	leaq	.LC4(%rip), %rcx
+	call	_Z6printfPKcz
+	pxor	%xmm0, %xmm0
+	cvtss2sd	-12(%rbp), %xmm0
+	movq	%xmm0, %rax
+	movq	%rax, %rdx
+	movq	%rdx, %xmm0
+	movapd	%xmm0, %xmm1
+	movq	%rax, %rdx
+	leaq	.LC5(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	.LC6(%rip), %rdx
+	movq	16(%rbp), %rcx
+	call	_Z18registrar_bitacoraPKcS0_
+	leaq	.LC7(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	-24(%rbp), %rax
+	movq	%rax, %rdx
+	leaq	.LC1(%rip), %rcx
+	call	_Z5scanfPKcz
+	movss	-24(%rbp), %xmm0
+	movss	.LC8(%rip), %xmm1
+	ucomiss	%xmm1, %xmm0
+	jp	.L8
+	movss	.LC8(%rip), %xmm1
+	ucomiss	%xmm1, %xmm0
+	jne	.L8
+	movq	16(%rbp), %rcx
+	call	_Z4menuPKc
+	jmp	.L7
+.L8:
+	movss	-24(%rbp), %xmm0
+	ucomiss	.LC9(%rip), %xmm0
+	jp	.L11
+	ucomiss	.LC9(%rip), %xmm0
+	jne	.L11
+	leaq	.LC10(%rip), %rcx
+	call	_Z6printfPKcz
+	jmp	.L7
+.L11:
+	leaq	.LC11(%rip), %rcx
+	call	_Z6printfPKcz
+	movq	16(%rbp), %rcx
+	call	_Z4menuPKc
+	nop
+.L7:
+	addq	$64, %rsp
 	popq	%rbp
 	ret
 	.seh_endproc
 	.section .rdata,"dr"
 	.align 8
-.LC21:
-	.ascii "Ingrese el n\303\272mero de lados del pol\303\255gono regular: \0"
+.LC12:
+	.ascii "Ingrese la base del paralelogramo: \0"
 	.align 8
-.LC22:
-	.ascii "Ingrese la longitud de un lado del pol\303\255gono: \0"
+.LC13:
+	.ascii "Ingrese la altura del paralelogramo: \0"
+	.align 8
+.LC14:
+	.ascii "Ingrese el segundo lado del paralelogramo: \0"
+	.align 8
+.LC15:
+	.ascii "\303\201rea del paralelogramo: %.2f\12\0"
+	.align 8
+.LC16:
+	.ascii "Per\303\255metro del paralelogramo: %.2f\12\0"
+.LC17:
+	.ascii "Paralelogramo calculado\0"
 	.text
-	.globl	_Z27calcularAreaPoligonoRegularv
-	.def	_Z27calcularAreaPoligonoRegularv;	.scl	2;	.type	32;	.endef
-	.seh_proc	_Z27calcularAreaPoligonoRegularv
-_Z27calcularAreaPoligonoRegularv:
+	.globl	_Z13paralelogramoPKc
+	.def	_Z13paralelogramoPKc;	.scl	2;	.type	32;	.endef
+	.seh_proc	_Z13paralelogramoPKc
+_Z13paralelogramoPKc:
 .LFB300:
 	pushq	%rbp
 	.seh_pushreg	%rbp
-	subq	$96, %rsp
-	.seh_stackalloc	96
-	leaq	80(%rsp), %rbp
-	.seh_setframe	%rbp, 80
-	movaps	%xmm6, 0(%rbp)
-	.seh_savexmm	%xmm6, 80
+	movq	%rsp, %rbp
+	.seh_setframe	%rbp, 0
+	subq	$64, %rsp
+	.seh_stackalloc	64
 	.seh_endprologue
-	movss	.LC19(%rip), %xmm0
+	movq	%rcx, 16(%rbp)
+	leaq	.LC12(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	-12(%rbp), %rax
+	movq	%rax, %rdx
+	leaq	.LC1(%rip), %rcx
+	call	_Z5scanfPKcz
+	leaq	.LC13(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	-16(%rbp), %rax
+	movq	%rax, %rdx
+	leaq	.LC1(%rip), %rcx
+	call	_Z5scanfPKcz
+	leaq	.LC14(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	-20(%rbp), %rax
+	movq	%rax, %rdx
+	leaq	.LC1(%rip), %rcx
+	call	_Z5scanfPKcz
+	movss	-12(%rbp), %xmm1
+	movss	-16(%rbp), %xmm0
+	mulss	%xmm1, %xmm0
 	movss	%xmm0, -4(%rbp)
-	leaq	.LC21(%rip), %rcx
-	call	_Z6printfPKcz
-	leaq	-40(%rbp), %rax
-	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
-	call	_Z5scanfPKcz
-	leaq	.LC22(%rip), %rcx
-	call	_Z6printfPKcz
-	leaq	-32(%rbp), %rax
-	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
-	call	_Z5scanfPKcz
-	movsd	-40(%rbp), %xmm1
-	movsd	-32(%rbp), %xmm0
-	mulsd	%xmm1, %xmm0
-	movsd	%xmm0, -16(%rbp)
-	movsd	-32(%rbp), %xmm6
+	movss	-12(%rbp), %xmm1
+	movss	-20(%rbp), %xmm0
+	addss	%xmm1, %xmm0
+	addss	%xmm0, %xmm0
+	movss	%xmm0, -8(%rbp)
 	pxor	%xmm0, %xmm0
 	cvtss2sd	-4(%rbp), %xmm0
-	movsd	-40(%rbp), %xmm1
-	divsd	%xmm1, %xmm0
 	movq	%xmm0, %rax
-	movq	%rax, %xmm0
-	call	tan
+	movq	%rax, %rdx
+	movq	%rdx, %xmm0
 	movapd	%xmm0, %xmm1
-	addsd	%xmm0, %xmm1
-	divsd	%xmm1, %xmm6
-	movapd	%xmm6, %xmm0
-	movsd	%xmm0, -24(%rbp)
-	movsd	-16(%rbp), %xmm0
-	mulsd	-24(%rbp), %xmm0
-	movsd	.LC15(%rip), %xmm1
-	divsd	%xmm1, %xmm0
+	movq	%rax, %rdx
+	leaq	.LC15(%rip), %rcx
+	call	_Z6printfPKcz
+	pxor	%xmm0, %xmm0
+	cvtss2sd	-8(%rbp), %xmm0
 	movq	%xmm0, %rax
-	movq	%rax, %xmm0
-	movaps	0(%rbp), %xmm6
-	addq	$96, %rsp
+	movq	%rax, %rdx
+	movq	%rdx, %xmm0
+	movapd	%xmm0, %xmm1
+	movq	%rax, %rdx
+	leaq	.LC16(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	.LC17(%rip), %rdx
+	movq	16(%rbp), %rcx
+	call	_Z18registrar_bitacoraPKcS0_
+	leaq	.LC7(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	-24(%rbp), %rax
+	movq	%rax, %rdx
+	leaq	.LC1(%rip), %rcx
+	call	_Z5scanfPKcz
+	movss	-24(%rbp), %xmm0
+	movss	.LC8(%rip), %xmm1
+	ucomiss	%xmm1, %xmm0
+	jp	.L17
+	movss	.LC8(%rip), %xmm1
+	ucomiss	%xmm1, %xmm0
+	jne	.L17
+	movq	16(%rbp), %rcx
+	call	_Z4menuPKc
+	jmp	.L16
+.L17:
+	movss	-24(%rbp), %xmm0
+	ucomiss	.LC9(%rip), %xmm0
+	jp	.L20
+	ucomiss	.LC9(%rip), %xmm0
+	jne	.L20
+	leaq	.LC10(%rip), %rcx
+	call	_Z6printfPKcz
+	jmp	.L16
+.L20:
+	leaq	.LC11(%rip), %rcx
+	call	_Z6printfPKcz
+	movq	16(%rbp), %rcx
+	call	_Z4menuPKc
+	nop
+.L16:
+	addq	$64, %rsp
 	popq	%rbp
 	ret
 	.seh_endproc
-	.globl	_Z32calcularPerimetroPoligonoRegularv
-	.def	_Z32calcularPerimetroPoligonoRegularv;	.scl	2;	.type	32;	.endef
-	.seh_proc	_Z32calcularPerimetroPoligonoRegularv
-_Z32calcularPerimetroPoligonoRegularv:
+	.section .rdata,"dr"
+	.align 8
+.LC18:
+	.ascii "ingrese el lado del cuadrado: \0"
+.LC20:
+	.ascii "\303\201rea del cuadrado: %.2f\12\0"
+.LC21:
+	.ascii "Perimetro del cuadrado: %.2f\12\0"
+.LC22:
+	.ascii "Cuadrado calculado\0"
+	.text
+	.globl	_Z8cuadradoPKc
+	.def	_Z8cuadradoPKc;	.scl	2;	.type	32;	.endef
+	.seh_proc	_Z8cuadradoPKc
+_Z8cuadradoPKc:
 .LFB301:
 	pushq	%rbp
 	.seh_pushreg	%rbp
@@ -702,104 +366,325 @@ _Z32calcularPerimetroPoligonoRegularv:
 	subq	$48, %rsp
 	.seh_stackalloc	48
 	.seh_endprologue
+	movq	%rcx, 16(%rbp)
+	leaq	.LC18(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	-12(%rbp), %rax
+	movq	%rax, %rdx
+	leaq	.LC1(%rip), %rcx
+	call	_Z5scanfPKcz
+	movss	-12(%rbp), %xmm1
+	movss	-12(%rbp), %xmm0
+	mulss	%xmm1, %xmm0
+	movss	%xmm0, -4(%rbp)
+	movss	-12(%rbp), %xmm1
+	movss	.LC19(%rip), %xmm0
+	mulss	%xmm1, %xmm0
+	movss	%xmm0, -8(%rbp)
+	pxor	%xmm0, %xmm0
+	cvtss2sd	-4(%rbp), %xmm0
+	movq	%xmm0, %rax
+	movq	%rax, %rdx
+	movq	%rdx, %xmm0
+	movapd	%xmm0, %xmm1
+	movq	%rax, %rdx
+	leaq	.LC20(%rip), %rcx
+	call	_Z6printfPKcz
+	pxor	%xmm0, %xmm0
+	cvtss2sd	-8(%rbp), %xmm0
+	movq	%xmm0, %rax
+	movq	%rax, %rdx
+	movq	%rdx, %xmm0
+	movapd	%xmm0, %xmm1
+	movq	%rax, %rdx
 	leaq	.LC21(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	.LC22(%rip), %rdx
+	movq	16(%rbp), %rcx
+	call	_Z18registrar_bitacoraPKcS0_
+	leaq	.LC7(%rip), %rcx
 	call	_Z6printfPKcz
 	leaq	-16(%rbp), %rax
 	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
+	leaq	.LC1(%rip), %rcx
 	call	_Z5scanfPKcz
-	leaq	.LC22(%rip), %rcx
+	movss	-16(%rbp), %xmm0
+	movss	.LC8(%rip), %xmm1
+	ucomiss	%xmm1, %xmm0
+	jp	.L26
+	movss	.LC8(%rip), %xmm1
+	ucomiss	%xmm1, %xmm0
+	jne	.L26
+	movq	16(%rbp), %rcx
+	call	_Z4menuPKc
+	jmp	.L25
+.L26:
+	movss	-16(%rbp), %xmm0
+	ucomiss	.LC9(%rip), %xmm0
+	jp	.L29
+	ucomiss	.LC9(%rip), %xmm0
+	jne	.L29
+	leaq	.LC10(%rip), %rcx
 	call	_Z6printfPKcz
-	leaq	-8(%rbp), %rax
-	movq	%rax, %rdx
+	jmp	.L25
+.L29:
 	leaq	.LC11(%rip), %rcx
-	call	_Z5scanfPKcz
-	movsd	-16(%rbp), %xmm1
-	movsd	-8(%rbp), %xmm0
-	mulsd	%xmm1, %xmm0
-	movq	%xmm0, %rax
-	movq	%rax, %xmm0
+	call	_Z6printfPKcz
+	movq	16(%rbp), %rcx
+	call	_Z4menuPKc
+	nop
+.L25:
 	addq	$48, %rsp
 	popq	%rbp
 	ret
 	.seh_endproc
 	.section .rdata,"dr"
+	.align 8
 .LC23:
-	.ascii "Ingrese el lado del cubo: \0"
+	.ascii "Ingrese el largo del rect\303\241ngulo: \0"
+	.align 8
+.LC24:
+	.ascii "Ingrese el ancho del rect\303\241ngulo: \0"
+.LC25:
+	.ascii "\303\201rea del rect\303\241ngulo: %.2f\12\0"
+	.align 8
+.LC26:
+	.ascii "Per\303\255metro del rect\303\241ngulo: %.2f\12\0"
+.LC27:
+	.ascii "Rect\303\241ngulo calculado\0"
 	.text
-	.globl	_Z22calcularSuperficieCubov
-	.def	_Z22calcularSuperficieCubov;	.scl	2;	.type	32;	.endef
-	.seh_proc	_Z22calcularSuperficieCubov
-_Z22calcularSuperficieCubov:
+	.globl	_Z10rectanguloPKc
+	.def	_Z10rectanguloPKc;	.scl	2;	.type	32;	.endef
+	.seh_proc	_Z10rectanguloPKc
+_Z10rectanguloPKc:
 .LFB302:
 	pushq	%rbp
 	.seh_pushreg	%rbp
 	movq	%rsp, %rbp
 	.seh_setframe	%rbp, 0
-	subq	$48, %rsp
-	.seh_stackalloc	48
+	subq	$64, %rsp
+	.seh_stackalloc	64
 	.seh_endprologue
+	movq	%rcx, 16(%rbp)
 	leaq	.LC23(%rip), %rcx
 	call	_Z6printfPKcz
-	leaq	-8(%rbp), %rax
+	leaq	-12(%rbp), %rax
 	movq	%rax, %rdx
-	leaq	.LC8(%rip), %rcx
+	leaq	.LC1(%rip), %rcx
 	call	_Z5scanfPKcz
-	movsd	-8(%rbp), %xmm1
-	movsd	.LC24(%rip), %xmm0
-	mulsd	%xmm0, %xmm1
-	movsd	-8(%rbp), %xmm0
-	mulsd	%xmm1, %xmm0
-	movq	%xmm0, %rax
-	movq	%rax, %xmm0
-	addq	$48, %rsp
-	popq	%rbp
-	ret
-	.seh_endproc
-	.globl	_Z19calcularVolumenCubov
-	.def	_Z19calcularVolumenCubov;	.scl	2;	.type	32;	.endef
-	.seh_proc	_Z19calcularVolumenCubov
-_Z19calcularVolumenCubov:
-.LFB303:
-	pushq	%rbp
-	.seh_pushreg	%rbp
-	movq	%rsp, %rbp
-	.seh_setframe	%rbp, 0
-	subq	$48, %rsp
-	.seh_stackalloc	48
-	.seh_endprologue
-	leaq	.LC23(%rip), %rcx
+	leaq	.LC24(%rip), %rcx
 	call	_Z6printfPKcz
-	leaq	-8(%rbp), %rax
+	leaq	-16(%rbp), %rax
 	movq	%rax, %rdx
-	leaq	.LC8(%rip), %rcx
+	leaq	.LC1(%rip), %rcx
 	call	_Z5scanfPKcz
-	movsd	-8(%rbp), %xmm1
-	movsd	-8(%rbp), %xmm0
-	mulsd	%xmm0, %xmm1
-	movsd	-8(%rbp), %xmm0
-	mulsd	%xmm1, %xmm0
+	movss	-12(%rbp), %xmm1
+	movss	-16(%rbp), %xmm0
+	mulss	%xmm1, %xmm0
+	movss	%xmm0, -4(%rbp)
+	movss	-12(%rbp), %xmm1
+	movss	-16(%rbp), %xmm0
+	addss	%xmm1, %xmm0
+	addss	%xmm0, %xmm0
+	movss	%xmm0, -8(%rbp)
+	pxor	%xmm0, %xmm0
+	cvtss2sd	-4(%rbp), %xmm0
 	movq	%xmm0, %rax
-	movq	%rax, %xmm0
-	addq	$48, %rsp
+	movq	%rax, %rdx
+	movq	%rdx, %xmm0
+	movapd	%xmm0, %xmm1
+	movq	%rax, %rdx
+	leaq	.LC25(%rip), %rcx
+	call	_Z6printfPKcz
+	pxor	%xmm0, %xmm0
+	cvtss2sd	-8(%rbp), %xmm0
+	movq	%xmm0, %rax
+	movq	%rax, %rdx
+	movq	%rdx, %xmm0
+	movapd	%xmm0, %xmm1
+	movq	%rax, %rdx
+	leaq	.LC26(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	.LC27(%rip), %rdx
+	movq	16(%rbp), %rcx
+	call	_Z18registrar_bitacoraPKcS0_
+	leaq	.LC7(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	-20(%rbp), %rax
+	movq	%rax, %rdx
+	leaq	.LC1(%rip), %rcx
+	call	_Z5scanfPKcz
+	movss	-20(%rbp), %xmm0
+	movss	.LC8(%rip), %xmm1
+	ucomiss	%xmm1, %xmm0
+	jp	.L35
+	movss	.LC8(%rip), %xmm1
+	ucomiss	%xmm1, %xmm0
+	jne	.L35
+	movq	16(%rbp), %rcx
+	call	_Z4menuPKc
+	jmp	.L34
+.L35:
+	movss	-20(%rbp), %xmm0
+	ucomiss	.LC9(%rip), %xmm0
+	jp	.L38
+	ucomiss	.LC9(%rip), %xmm0
+	jne	.L38
+	leaq	.LC10(%rip), %rcx
+	call	_Z6printfPKcz
+	jmp	.L34
+.L38:
+	leaq	.LC11(%rip), %rcx
+	call	_Z6printfPKcz
+	movq	16(%rbp), %rcx
+	call	_Z4menuPKc
+	nop
+.L34:
+	addq	$64, %rsp
 	popq	%rbp
 	ret
 	.seh_endproc
 	.section .rdata,"dr"
 	.align 8
-.LC25:
-	.ascii "Ingrese la longitud del cuboide: \0"
+.LC28:
+	.ascii "Ingrese la diagonal mayor del rombo: \0"
 	.align 8
-.LC26:
-	.ascii "Ingrese el ancho del cuboide: \0"
-	.align 8
-.LC27:
-	.ascii "Ingrese la altura del cuboide: \0"
+.LC29:
+	.ascii "Ingrese la diagonal menor del rombo: \0"
+.LC30:
+	.ascii "Ingrese el lado del rombo: \0"
+.LC31:
+	.ascii "\303\201rea del rombo: %.2f\12\0"
+.LC32:
+	.ascii "Per\303\255metro del rombo: %.2f\12\0"
+.LC33:
+	.ascii "Rombo calculado\0"
 	.text
-	.globl	_Z25calcularSuperficieCuboidev
-	.def	_Z25calcularSuperficieCuboidev;	.scl	2;	.type	32;	.endef
-	.seh_proc	_Z25calcularSuperficieCuboidev
-_Z25calcularSuperficieCuboidev:
+	.globl	_Z5romboPKc
+	.def	_Z5romboPKc;	.scl	2;	.type	32;	.endef
+	.seh_proc	_Z5romboPKc
+_Z5romboPKc:
+.LFB303:
+	pushq	%rbp
+	.seh_pushreg	%rbp
+	movq	%rsp, %rbp
+	.seh_setframe	%rbp, 0
+	subq	$64, %rsp
+	.seh_stackalloc	64
+	.seh_endprologue
+	movq	%rcx, 16(%rbp)
+	leaq	.LC28(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	-12(%rbp), %rax
+	movq	%rax, %rdx
+	leaq	.LC1(%rip), %rcx
+	call	_Z5scanfPKcz
+	leaq	.LC29(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	-16(%rbp), %rax
+	movq	%rax, %rdx
+	leaq	.LC1(%rip), %rcx
+	call	_Z5scanfPKcz
+	leaq	.LC30(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	-20(%rbp), %rax
+	movq	%rax, %rdx
+	leaq	.LC1(%rip), %rcx
+	call	_Z5scanfPKcz
+	movss	-12(%rbp), %xmm1
+	movss	-16(%rbp), %xmm0
+	mulss	%xmm1, %xmm0
+	movss	.LC3(%rip), %xmm1
+	divss	%xmm1, %xmm0
+	movss	%xmm0, -4(%rbp)
+	movss	-20(%rbp), %xmm1
+	movss	.LC19(%rip), %xmm0
+	mulss	%xmm1, %xmm0
+	movss	%xmm0, -8(%rbp)
+	pxor	%xmm0, %xmm0
+	cvtss2sd	-4(%rbp), %xmm0
+	movq	%xmm0, %rax
+	movq	%rax, %rdx
+	movq	%rdx, %xmm0
+	movapd	%xmm0, %xmm1
+	movq	%rax, %rdx
+	leaq	.LC31(%rip), %rcx
+	call	_Z6printfPKcz
+	pxor	%xmm0, %xmm0
+	cvtss2sd	-8(%rbp), %xmm0
+	movq	%xmm0, %rax
+	movq	%rax, %rdx
+	movq	%rdx, %xmm0
+	movapd	%xmm0, %xmm1
+	movq	%rax, %rdx
+	leaq	.LC32(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	.LC33(%rip), %rdx
+	movq	16(%rbp), %rcx
+	call	_Z18registrar_bitacoraPKcS0_
+	leaq	.LC7(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	-24(%rbp), %rax
+	movq	%rax, %rdx
+	leaq	.LC1(%rip), %rcx
+	call	_Z5scanfPKcz
+	movss	-24(%rbp), %xmm0
+	movss	.LC8(%rip), %xmm1
+	ucomiss	%xmm1, %xmm0
+	jp	.L44
+	movss	.LC8(%rip), %xmm1
+	ucomiss	%xmm1, %xmm0
+	jne	.L44
+	movq	16(%rbp), %rcx
+	call	_Z4menuPKc
+	jmp	.L43
+.L44:
+	movss	-24(%rbp), %xmm0
+	ucomiss	.LC9(%rip), %xmm0
+	jp	.L47
+	ucomiss	.LC9(%rip), %xmm0
+	jne	.L47
+	leaq	.LC10(%rip), %rcx
+	call	_Z6printfPKcz
+	jmp	.L43
+.L47:
+	leaq	.LC11(%rip), %rcx
+	call	_Z6printfPKcz
+	movq	16(%rbp), %rcx
+	call	_Z4menuPKc
+	nop
+.L43:
+	addq	$64, %rsp
+	popq	%rbp
+	ret
+	.seh_endproc
+	.section .rdata,"dr"
+	.align 8
+.LC34:
+	.ascii "Ingrese la base mayor del trapecio: \0"
+	.align 8
+.LC35:
+	.ascii "Ingrese la base menor del trapecio: \0"
+	.align 8
+.LC36:
+	.ascii "Ingrese la altura del trapecio: \0"
+	.align 8
+.LC37:
+	.ascii "Ingrese los lados no paralelos del trapecio separados por espacio: \0"
+.LC38:
+	.ascii "%f %f\0"
+.LC39:
+	.ascii "\303\201rea del trapecio: %.2f\12\0"
+	.align 8
+.LC40:
+	.ascii "Per\303\255metro del trapecio: %.2f\12\0"
+.LC41:
+	.ascii "Trapecio calculado\0"
+	.text
+	.globl	_Z8trapecioPKc
+	.def	_Z8trapecioPKc;	.scl	2;	.type	32;	.endef
+	.seh_proc	_Z8trapecioPKc
+_Z8trapecioPKc:
 .LFB304:
 	pushq	%rbp
 	.seh_pushreg	%rbp
@@ -808,96 +693,123 @@ _Z25calcularSuperficieCuboidev:
 	subq	$64, %rsp
 	.seh_stackalloc	64
 	.seh_endprologue
-	leaq	.LC25(%rip), %rcx
+	movq	%rcx, 16(%rbp)
+	leaq	.LC34(%rip), %rcx
 	call	_Z6printfPKcz
-	leaq	-8(%rbp), %rax
+	leaq	-12(%rbp), %rax
 	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
+	leaq	.LC1(%rip), %rcx
 	call	_Z5scanfPKcz
-	leaq	.LC26(%rip), %rcx
-	call	_Z6printfPKcz
-	leaq	-16(%rbp), %rax
-	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
-	call	_Z5scanfPKcz
-	leaq	.LC27(%rip), %rcx
-	call	_Z6printfPKcz
-	leaq	-24(%rbp), %rax
-	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
-	call	_Z5scanfPKcz
-	movsd	-8(%rbp), %xmm1
-	movsd	-16(%rbp), %xmm0
-	mulsd	%xmm0, %xmm1
-	movsd	-8(%rbp), %xmm2
-	movsd	-24(%rbp), %xmm0
-	mulsd	%xmm2, %xmm0
-	addsd	%xmm0, %xmm1
-	movsd	-16(%rbp), %xmm2
-	movsd	-24(%rbp), %xmm0
-	mulsd	%xmm2, %xmm0
-	addsd	%xmm1, %xmm0
-	addsd	%xmm0, %xmm0
-	movq	%xmm0, %rax
-	movq	%rax, %xmm0
-	addq	$64, %rsp
-	popq	%rbp
-	ret
-	.seh_endproc
-	.globl	_Z22calcularVolumenCuboidev
-	.def	_Z22calcularVolumenCuboidev;	.scl	2;	.type	32;	.endef
-	.seh_proc	_Z22calcularVolumenCuboidev
-_Z22calcularVolumenCuboidev:
-.LFB305:
-	pushq	%rbp
-	.seh_pushreg	%rbp
-	movq	%rsp, %rbp
-	.seh_setframe	%rbp, 0
-	subq	$64, %rsp
-	.seh_stackalloc	64
-	.seh_endprologue
-	leaq	.LC25(%rip), %rcx
-	call	_Z6printfPKcz
-	leaq	-8(%rbp), %rax
-	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
-	call	_Z5scanfPKcz
-	leaq	.LC26(%rip), %rcx
+	leaq	.LC35(%rip), %rcx
 	call	_Z6printfPKcz
 	leaq	-16(%rbp), %rax
 	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
+	leaq	.LC1(%rip), %rcx
 	call	_Z5scanfPKcz
-	leaq	.LC27(%rip), %rcx
+	leaq	.LC36(%rip), %rcx
 	call	_Z6printfPKcz
-	leaq	-24(%rbp), %rax
+	leaq	-20(%rbp), %rax
 	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
+	leaq	.LC1(%rip), %rcx
 	call	_Z5scanfPKcz
-	movsd	-8(%rbp), %xmm1
-	movsd	-16(%rbp), %xmm0
-	mulsd	%xmm0, %xmm1
-	movsd	-24(%rbp), %xmm0
-	mulsd	%xmm1, %xmm0
+	leaq	.LC37(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	-28(%rbp), %rdx
+	leaq	-24(%rbp), %rax
+	movq	%rdx, %r8
+	movq	%rax, %rdx
+	leaq	.LC38(%rip), %rcx
+	call	_Z5scanfPKcz
+	movss	-12(%rbp), %xmm1
+	movss	-16(%rbp), %xmm0
+	addss	%xmm0, %xmm1
+	movss	-20(%rbp), %xmm0
+	mulss	%xmm1, %xmm0
+	movss	.LC3(%rip), %xmm1
+	divss	%xmm1, %xmm0
+	movss	%xmm0, -4(%rbp)
+	movss	-12(%rbp), %xmm1
+	movss	-16(%rbp), %xmm0
+	addss	%xmm0, %xmm1
+	movss	-24(%rbp), %xmm0
+	addss	%xmm0, %xmm1
+	movss	-28(%rbp), %xmm0
+	addss	%xmm1, %xmm0
+	movss	%xmm0, -8(%rbp)
+	pxor	%xmm0, %xmm0
+	cvtss2sd	-4(%rbp), %xmm0
 	movq	%xmm0, %rax
-	movq	%rax, %xmm0
+	movq	%rax, %rdx
+	movq	%rdx, %xmm0
+	movapd	%xmm0, %xmm1
+	movq	%rax, %rdx
+	leaq	.LC39(%rip), %rcx
+	call	_Z6printfPKcz
+	pxor	%xmm0, %xmm0
+	cvtss2sd	-8(%rbp), %xmm0
+	movq	%xmm0, %rax
+	movq	%rax, %rdx
+	movq	%rdx, %xmm0
+	movapd	%xmm0, %xmm1
+	movq	%rax, %rdx
+	leaq	.LC40(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	.LC41(%rip), %rdx
+	movq	16(%rbp), %rcx
+	call	_Z18registrar_bitacoraPKcS0_
+	leaq	.LC7(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	-32(%rbp), %rax
+	movq	%rax, %rdx
+	leaq	.LC1(%rip), %rcx
+	call	_Z5scanfPKcz
+	movss	-32(%rbp), %xmm0
+	movss	.LC8(%rip), %xmm1
+	ucomiss	%xmm1, %xmm0
+	jp	.L53
+	movss	.LC8(%rip), %xmm1
+	ucomiss	%xmm1, %xmm0
+	jne	.L53
+	movq	16(%rbp), %rcx
+	call	_Z4menuPKc
+	jmp	.L52
+.L53:
+	movss	-32(%rbp), %xmm0
+	ucomiss	.LC9(%rip), %xmm0
+	jp	.L56
+	ucomiss	.LC9(%rip), %xmm0
+	jne	.L56
+	leaq	.LC10(%rip), %rcx
+	call	_Z6printfPKcz
+	jmp	.L52
+.L56:
+	leaq	.LC11(%rip), %rcx
+	call	_Z6printfPKcz
+	movq	16(%rbp), %rcx
+	call	_Z4menuPKc
+	nop
+.L52:
 	addq	$64, %rsp
 	popq	%rbp
 	ret
 	.seh_endproc
 	.section .rdata,"dr"
 	.align 8
-.LC28:
-	.ascii "Ingrese el radio de la base del cilindro recto: \0"
+.LC42:
+	.ascii "Ingrese el radio del c\303\255rculo: \0"
+.LC45:
+	.ascii "\303\201rea del c\303\255rculo: %.2f\12\0"
 	.align 8
-.LC29:
-	.ascii "Ingrese la altura del cilindro recto: \0"
+.LC46:
+	.ascii "Per\303\255metro (circunferencia) del c\303\255rculo: %.2f\12\0"
+.LC47:
+	.ascii "Circulo calculado\0"
 	.text
-	.globl	_Z26calcularSuperficieCilindrov
-	.def	_Z26calcularSuperficieCilindrov;	.scl	2;	.type	32;	.endef
-	.seh_proc	_Z26calcularSuperficieCilindrov
-_Z26calcularSuperficieCilindrov:
-.LFB306:
+	.globl	_Z7circuloPKc
+	.def	_Z7circuloPKc;	.scl	2;	.type	32;	.endef
+	.seh_proc	_Z7circuloPKc
+_Z7circuloPKc:
+.LFB305:
 	pushq	%rbp
 	.seh_pushreg	%rbp
 	movq	%rsp, %rbp
@@ -905,35 +817,229 @@ _Z26calcularSuperficieCilindrov:
 	subq	$48, %rsp
 	.seh_stackalloc	48
 	.seh_endprologue
-	leaq	.LC28(%rip), %rcx
+	movq	%rcx, 16(%rbp)
+	leaq	.LC42(%rip), %rcx
 	call	_Z6printfPKcz
-	leaq	-8(%rbp), %rax
+	leaq	-12(%rbp), %rax
 	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
+	leaq	.LC1(%rip), %rcx
 	call	_Z5scanfPKcz
-	leaq	.LC29(%rip), %rcx
+	movss	-12(%rbp), %xmm0
+	pxor	%xmm1, %xmm1
+	cvtss2sd	%xmm0, %xmm1
+	movsd	.LC43(%rip), %xmm0
+	mulsd	%xmm0, %xmm1
+	movss	-12(%rbp), %xmm0
+	cvtss2sd	%xmm0, %xmm0
+	mulsd	%xmm1, %xmm0
+	cvtsd2ss	%xmm0, %xmm0
+	movss	%xmm0, -4(%rbp)
+	movss	-12(%rbp), %xmm0
+	pxor	%xmm1, %xmm1
+	cvtss2sd	%xmm0, %xmm1
+	movsd	.LC44(%rip), %xmm0
+	mulsd	%xmm1, %xmm0
+	cvtsd2ss	%xmm0, %xmm0
+	movss	%xmm0, -8(%rbp)
+	pxor	%xmm0, %xmm0
+	cvtss2sd	-4(%rbp), %xmm0
+	movq	%xmm0, %rax
+	movq	%rax, %rdx
+	movq	%rdx, %xmm0
+	movapd	%xmm0, %xmm1
+	movq	%rax, %rdx
+	leaq	.LC45(%rip), %rcx
+	call	_Z6printfPKcz
+	pxor	%xmm0, %xmm0
+	cvtss2sd	-8(%rbp), %xmm0
+	movq	%xmm0, %rax
+	movq	%rax, %rdx
+	movq	%rdx, %xmm0
+	movapd	%xmm0, %xmm1
+	movq	%rax, %rdx
+	leaq	.LC46(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	.LC47(%rip), %rdx
+	movq	16(%rbp), %rcx
+	call	_Z18registrar_bitacoraPKcS0_
+	leaq	.LC7(%rip), %rcx
 	call	_Z6printfPKcz
 	leaq	-16(%rbp), %rax
 	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
+	leaq	.LC1(%rip), %rcx
 	call	_Z5scanfPKcz
-	movsd	-8(%rbp), %xmm1
-	movsd	.LC30(%rip), %xmm0
-	mulsd	%xmm0, %xmm1
-	movsd	-8(%rbp), %xmm2
-	movsd	-16(%rbp), %xmm0
-	addsd	%xmm2, %xmm0
-	mulsd	%xmm1, %xmm0
-	movq	%xmm0, %rax
-	movq	%rax, %xmm0
+	movss	-16(%rbp), %xmm0
+	movss	.LC8(%rip), %xmm1
+	ucomiss	%xmm1, %xmm0
+	jp	.L62
+	movss	.LC8(%rip), %xmm1
+	ucomiss	%xmm1, %xmm0
+	jne	.L62
+	movq	16(%rbp), %rcx
+	call	_Z4menuPKc
+	jmp	.L61
+.L62:
+	movss	-16(%rbp), %xmm0
+	ucomiss	.LC9(%rip), %xmm0
+	jp	.L65
+	ucomiss	.LC9(%rip), %xmm0
+	jne	.L65
+	leaq	.LC10(%rip), %rcx
+	call	_Z6printfPKcz
+	jmp	.L61
+.L65:
+	leaq	.LC11(%rip), %rcx
+	call	_Z6printfPKcz
+	movq	16(%rbp), %rcx
+	call	_Z4menuPKc
+	nop
+.L61:
 	addq	$48, %rsp
 	popq	%rbp
 	ret
 	.seh_endproc
-	.globl	_Z23calcularVolumenCilindrov
-	.def	_Z23calcularVolumenCilindrov;	.scl	2;	.type	32;	.endef
-	.seh_proc	_Z23calcularVolumenCilindrov
-_Z23calcularVolumenCilindrov:
+	.section .rdata,"dr"
+	.align 8
+.LC48:
+	.ascii "Ingrese el n\303\272mero de lados del pol\303\255gono regular: \0"
+	.align 8
+.LC49:
+	.ascii "Ingrese la longitud de un lado del pol\303\255gono: \0"
+	.align 8
+.LC50:
+	.ascii "\303\201rea del pol\303\255gono regular: %.2f\12\0"
+	.align 8
+.LC51:
+	.ascii "Per\303\255metro del pol\303\255gono regular: %.2f\12\0"
+.LC52:
+	.ascii "Pol\303\255gono regular calculado\0"
+	.text
+	.globl	_Z16poligono_regularPKc
+	.def	_Z16poligono_regularPKc;	.scl	2;	.type	32;	.endef
+	.seh_proc	_Z16poligono_regularPKc
+_Z16poligono_regularPKc:
+.LFB306:
+	pushq	%rbp
+	.seh_pushreg	%rbp
+	subq	$80, %rsp
+	.seh_stackalloc	80
+	leaq	64(%rsp), %rbp
+	.seh_setframe	%rbp, 64
+	movaps	%xmm6, 0(%rbp)
+	.seh_savexmm	%xmm6, 64
+	.seh_endprologue
+	movq	%rcx, 32(%rbp)
+	leaq	.LC48(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	-20(%rbp), %rax
+	movq	%rax, %rdx
+	leaq	.LC1(%rip), %rcx
+	call	_Z5scanfPKcz
+	leaq	.LC49(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	-16(%rbp), %rax
+	movq	%rax, %rdx
+	leaq	.LC1(%rip), %rcx
+	call	_Z5scanfPKcz
+	movss	-20(%rbp), %xmm1
+	movss	-16(%rbp), %xmm0
+	mulss	%xmm1, %xmm0
+	movss	%xmm0, -4(%rbp)
+	movss	-16(%rbp), %xmm0
+	pxor	%xmm6, %xmm6
+	cvtss2sd	%xmm0, %xmm6
+	movss	-20(%rbp), %xmm0
+	pxor	%xmm1, %xmm1
+	cvtss2sd	%xmm0, %xmm1
+	movsd	.LC43(%rip), %xmm0
+	divsd	%xmm1, %xmm0
+	movq	%xmm0, %rax
+	movq	%rax, %xmm0
+	call	tan
+	addsd	%xmm0, %xmm0
+	divsd	%xmm0, %xmm6
+	movapd	%xmm6, %xmm1
+	pxor	%xmm0, %xmm0
+	cvtsd2ss	%xmm1, %xmm0
+	movss	%xmm0, -8(%rbp)
+	movss	-4(%rbp), %xmm0
+	mulss	-8(%rbp), %xmm0
+	movss	.LC3(%rip), %xmm1
+	divss	%xmm1, %xmm0
+	movss	%xmm0, -12(%rbp)
+	pxor	%xmm0, %xmm0
+	cvtss2sd	-12(%rbp), %xmm0
+	movq	%xmm0, %rax
+	movq	%rax, %rdx
+	movq	%rdx, %xmm0
+	movapd	%xmm0, %xmm1
+	movq	%rax, %rdx
+	leaq	.LC50(%rip), %rcx
+	call	_Z6printfPKcz
+	pxor	%xmm0, %xmm0
+	cvtss2sd	-4(%rbp), %xmm0
+	movq	%xmm0, %rax
+	movq	%rax, %rdx
+	movq	%rdx, %xmm0
+	movapd	%xmm0, %xmm1
+	movq	%rax, %rdx
+	leaq	.LC51(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	.LC52(%rip), %rdx
+	movq	32(%rbp), %rcx
+	call	_Z18registrar_bitacoraPKcS0_
+	leaq	.LC7(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	-24(%rbp), %rax
+	movq	%rax, %rdx
+	leaq	.LC1(%rip), %rcx
+	call	_Z5scanfPKcz
+	movss	-24(%rbp), %xmm0
+	movss	.LC8(%rip), %xmm1
+	ucomiss	%xmm1, %xmm0
+	jp	.L71
+	movss	.LC8(%rip), %xmm1
+	ucomiss	%xmm1, %xmm0
+	jne	.L71
+	movq	32(%rbp), %rcx
+	call	_Z4menuPKc
+	jmp	.L70
+.L71:
+	movss	-24(%rbp), %xmm0
+	ucomiss	.LC9(%rip), %xmm0
+	jp	.L74
+	ucomiss	.LC9(%rip), %xmm0
+	jne	.L74
+	leaq	.LC10(%rip), %rcx
+	call	_Z6printfPKcz
+	jmp	.L70
+.L74:
+	leaq	.LC11(%rip), %rcx
+	call	_Z6printfPKcz
+	movq	32(%rbp), %rcx
+	call	_Z4menuPKc
+	nop
+.L70:
+	movaps	0(%rbp), %xmm6
+	addq	$80, %rsp
+	popq	%rbp
+	ret
+	.seh_endproc
+	.section .rdata,"dr"
+	.align 8
+.LC53:
+	.ascii "Ingrese la longitud del cubo: \0"
+.LC55:
+	.ascii "Superficie del cubo: %.2f\12\0"
+.LC56:
+	.ascii "Volumen del cubo: %.2f\12\0"
+.LC57:
+	.ascii "Cubo calculado\0"
+	.text
+	.globl	_Z4cuboPKc
+	.def	_Z4cuboPKc;	.scl	2;	.type	32;	.endef
+	.seh_proc	_Z4cuboPKc
+_Z4cuboPKc:
 .LFB307:
 	pushq	%rbp
 	.seh_pushreg	%rbp
@@ -942,108 +1048,104 @@ _Z23calcularVolumenCilindrov:
 	subq	$48, %rsp
 	.seh_stackalloc	48
 	.seh_endprologue
-	leaq	.LC28(%rip), %rcx
+	movq	%rcx, 16(%rbp)
+	leaq	.LC53(%rip), %rcx
 	call	_Z6printfPKcz
-	leaq	-8(%rbp), %rax
+	leaq	-12(%rbp), %rax
 	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
+	leaq	.LC1(%rip), %rcx
 	call	_Z5scanfPKcz
-	leaq	.LC29(%rip), %rcx
+	movss	-12(%rbp), %xmm1
+	movss	-12(%rbp), %xmm0
+	mulss	%xmm0, %xmm1
+	movss	.LC54(%rip), %xmm0
+	mulss	%xmm1, %xmm0
+	movss	%xmm0, -4(%rbp)
+	movss	-12(%rbp), %xmm1
+	movss	-12(%rbp), %xmm0
+	mulss	%xmm0, %xmm1
+	movss	-12(%rbp), %xmm0
+	mulss	%xmm1, %xmm0
+	movss	%xmm0, -8(%rbp)
+	pxor	%xmm0, %xmm0
+	cvtss2sd	-4(%rbp), %xmm0
+	movq	%xmm0, %rax
+	movq	%rax, %rdx
+	movq	%rdx, %xmm0
+	movapd	%xmm0, %xmm1
+	movq	%rax, %rdx
+	leaq	.LC55(%rip), %rcx
+	call	_Z6printfPKcz
+	pxor	%xmm0, %xmm0
+	cvtss2sd	-8(%rbp), %xmm0
+	movq	%xmm0, %rax
+	movq	%rax, %rdx
+	movq	%rdx, %xmm0
+	movapd	%xmm0, %xmm1
+	movq	%rax, %rdx
+	leaq	.LC56(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	.LC57(%rip), %rdx
+	movq	16(%rbp), %rcx
+	call	_Z18registrar_bitacoraPKcS0_
+	leaq	.LC7(%rip), %rcx
 	call	_Z6printfPKcz
 	leaq	-16(%rbp), %rax
 	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
+	leaq	.LC1(%rip), %rcx
 	call	_Z5scanfPKcz
-	movsd	-8(%rbp), %xmm1
-	movsd	.LC31(%rip), %xmm0
-	mulsd	%xmm0, %xmm1
-	movsd	-8(%rbp), %xmm0
-	mulsd	%xmm0, %xmm1
-	movsd	-16(%rbp), %xmm0
-	mulsd	%xmm1, %xmm0
-	movq	%xmm0, %rax
-	movq	%rax, %xmm0
+	movss	-16(%rbp), %xmm0
+	movss	.LC8(%rip), %xmm1
+	ucomiss	%xmm1, %xmm0
+	jp	.L80
+	movss	.LC8(%rip), %xmm1
+	ucomiss	%xmm1, %xmm0
+	jne	.L80
+	movq	16(%rbp), %rcx
+	call	_Z4menuPKc
+	jmp	.L79
+.L80:
+	movss	-16(%rbp), %xmm0
+	ucomiss	.LC9(%rip), %xmm0
+	jp	.L83
+	ucomiss	.LC9(%rip), %xmm0
+	jne	.L83
+	leaq	.LC10(%rip), %rcx
+	call	_Z6printfPKcz
+	jmp	.L79
+.L83:
+	leaq	.LC11(%rip), %rcx
+	call	_Z6printfPKcz
+	movq	16(%rbp), %rcx
+	call	_Z4menuPKc
+	nop
+.L79:
 	addq	$48, %rsp
 	popq	%rbp
 	ret
 	.seh_endproc
 	.section .rdata,"dr"
 	.align 8
-.LC32:
-	.ascii "Ingrese el radio de la esfera: \0"
+.LC58:
+	.ascii "Ingrese la longitud del cuboide: \0"
+	.align 8
+.LC59:
+	.ascii "Ingrese el ancho del cuboide: \0"
+	.align 8
+.LC60:
+	.ascii "Ingrese la altura del cuboide: \0"
+.LC61:
+	.ascii "Superficie del cuboide: %.2f\12\0"
+.LC62:
+	.ascii "Volumen del cuboide: %.2f\12\0"
+.LC63:
+	.ascii "Cuboide calculado\0"
 	.text
-	.globl	_Z24calcularSuperficieEsferav
-	.def	_Z24calcularSuperficieEsferav;	.scl	2;	.type	32;	.endef
-	.seh_proc	_Z24calcularSuperficieEsferav
-_Z24calcularSuperficieEsferav:
+	.globl	_Z7cuboidePKc
+	.def	_Z7cuboidePKc;	.scl	2;	.type	32;	.endef
+	.seh_proc	_Z7cuboidePKc
+_Z7cuboidePKc:
 .LFB308:
-	pushq	%rbp
-	.seh_pushreg	%rbp
-	movq	%rsp, %rbp
-	.seh_setframe	%rbp, 0
-	subq	$48, %rsp
-	.seh_stackalloc	48
-	.seh_endprologue
-	leaq	.LC32(%rip), %rcx
-	call	_Z6printfPKcz
-	leaq	-8(%rbp), %rax
-	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
-	call	_Z5scanfPKcz
-	movsd	-8(%rbp), %xmm1
-	movsd	.LC33(%rip), %xmm0
-	mulsd	%xmm0, %xmm1
-	movsd	-8(%rbp), %xmm0
-	mulsd	%xmm1, %xmm0
-	movq	%xmm0, %rax
-	movq	%rax, %xmm0
-	addq	$48, %rsp
-	popq	%rbp
-	ret
-	.seh_endproc
-	.globl	_Z21calcularVolumenEsferav
-	.def	_Z21calcularVolumenEsferav;	.scl	2;	.type	32;	.endef
-	.seh_proc	_Z21calcularVolumenEsferav
-_Z21calcularVolumenEsferav:
-.LFB309:
-	pushq	%rbp
-	.seh_pushreg	%rbp
-	movq	%rsp, %rbp
-	.seh_setframe	%rbp, 0
-	subq	$48, %rsp
-	.seh_stackalloc	48
-	.seh_endprologue
-	leaq	.LC32(%rip), %rcx
-	call	_Z6printfPKcz
-	leaq	-8(%rbp), %rax
-	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
-	call	_Z5scanfPKcz
-	movsd	-8(%rbp), %xmm1
-	movsd	.LC34(%rip), %xmm0
-	mulsd	%xmm0, %xmm1
-	movsd	-8(%rbp), %xmm0
-	mulsd	%xmm0, %xmm1
-	movsd	-8(%rbp), %xmm0
-	mulsd	%xmm1, %xmm0
-	movq	%xmm0, %rax
-	movq	%rax, %xmm0
-	addq	$48, %rsp
-	popq	%rbp
-	ret
-	.seh_endproc
-	.section .rdata,"dr"
-	.align 8
-.LC35:
-	.ascii "Ingrese el radio de la base del cono: \0"
-.LC36:
-	.ascii "Ingrese la altura del cono: \0"
-	.text
-	.globl	_Z22calcularSuperficieConov
-	.def	_Z22calcularSuperficieConov;	.scl	2;	.type	32;	.endef
-	.seh_proc	_Z22calcularSuperficieConov
-_Z22calcularSuperficieConov:
-.LFB310:
 	pushq	%rbp
 	.seh_pushreg	%rbp
 	movq	%rsp, %rbp
@@ -1051,47 +1153,241 @@ _Z22calcularSuperficieConov:
 	subq	$64, %rsp
 	.seh_stackalloc	64
 	.seh_endprologue
-	leaq	.LC35(%rip), %rcx
+	movq	%rcx, 16(%rbp)
+	leaq	.LC58(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	-12(%rbp), %rax
+	movq	%rax, %rdx
+	leaq	.LC1(%rip), %rcx
+	call	_Z5scanfPKcz
+	leaq	.LC59(%rip), %rcx
 	call	_Z6printfPKcz
 	leaq	-16(%rbp), %rax
 	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
+	leaq	.LC1(%rip), %rcx
 	call	_Z5scanfPKcz
-	leaq	.LC36(%rip), %rcx
+	leaq	.LC60(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	-20(%rbp), %rax
+	movq	%rax, %rdx
+	leaq	.LC1(%rip), %rcx
+	call	_Z5scanfPKcz
+	movss	-12(%rbp), %xmm1
+	movss	-16(%rbp), %xmm0
+	mulss	%xmm0, %xmm1
+	movss	-12(%rbp), %xmm2
+	movss	-20(%rbp), %xmm0
+	mulss	%xmm2, %xmm0
+	addss	%xmm0, %xmm1
+	movss	-16(%rbp), %xmm2
+	movss	-20(%rbp), %xmm0
+	mulss	%xmm2, %xmm0
+	addss	%xmm1, %xmm0
+	addss	%xmm0, %xmm0
+	movss	%xmm0, -4(%rbp)
+	movss	-12(%rbp), %xmm1
+	movss	-16(%rbp), %xmm0
+	mulss	%xmm0, %xmm1
+	movss	-20(%rbp), %xmm0
+	mulss	%xmm1, %xmm0
+	movss	%xmm0, -8(%rbp)
+	pxor	%xmm0, %xmm0
+	cvtss2sd	-4(%rbp), %xmm0
+	movq	%xmm0, %rax
+	movq	%rax, %rdx
+	movq	%rdx, %xmm0
+	movapd	%xmm0, %xmm1
+	movq	%rax, %rdx
+	leaq	.LC61(%rip), %rcx
+	call	_Z6printfPKcz
+	pxor	%xmm0, %xmm0
+	cvtss2sd	-8(%rbp), %xmm0
+	movq	%xmm0, %rax
+	movq	%rax, %rdx
+	movq	%rdx, %xmm0
+	movapd	%xmm0, %xmm1
+	movq	%rax, %rdx
+	leaq	.LC62(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	.LC63(%rip), %rdx
+	movq	16(%rbp), %rcx
+	call	_Z18registrar_bitacoraPKcS0_
+	leaq	.LC7(%rip), %rcx
 	call	_Z6printfPKcz
 	leaq	-24(%rbp), %rax
 	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
+	leaq	.LC1(%rip), %rcx
 	call	_Z5scanfPKcz
-	movsd	-16(%rbp), %xmm1
-	movsd	-16(%rbp), %xmm0
-	mulsd	%xmm0, %xmm1
-	movsd	-24(%rbp), %xmm2
-	movsd	-24(%rbp), %xmm0
-	mulsd	%xmm2, %xmm0
-	addsd	%xmm0, %xmm1
-	movq	%xmm1, %rax
-	movq	%rax, %xmm0
-	call	sqrt
-	movq	%xmm0, %rax
-	movq	%rax, -8(%rbp)
-	movsd	-16(%rbp), %xmm1
-	movsd	.LC31(%rip), %xmm0
-	mulsd	%xmm0, %xmm1
-	movsd	-16(%rbp), %xmm0
-	addsd	-8(%rbp), %xmm0
-	mulsd	%xmm1, %xmm0
-	movq	%xmm0, %rax
-	movq	%rax, %xmm0
+	movss	-24(%rbp), %xmm0
+	movss	.LC8(%rip), %xmm1
+	ucomiss	%xmm1, %xmm0
+	jp	.L89
+	movss	.LC8(%rip), %xmm1
+	ucomiss	%xmm1, %xmm0
+	jne	.L89
+	movq	16(%rbp), %rcx
+	call	_Z4menuPKc
+	jmp	.L88
+.L89:
+	movss	-24(%rbp), %xmm0
+	ucomiss	.LC9(%rip), %xmm0
+	jp	.L92
+	ucomiss	.LC9(%rip), %xmm0
+	jne	.L92
+	leaq	.LC10(%rip), %rcx
+	call	_Z6printfPKcz
+	jmp	.L88
+.L92:
+	leaq	.LC11(%rip), %rcx
+	call	_Z6printfPKcz
+	movq	16(%rbp), %rcx
+	call	_Z4menuPKc
+	nop
+.L88:
 	addq	$64, %rsp
 	popq	%rbp
 	ret
 	.seh_endproc
-	.globl	_Z19calcularVolumenConov
-	.def	_Z19calcularVolumenConov;	.scl	2;	.type	32;	.endef
-	.seh_proc	_Z19calcularVolumenConov
-_Z19calcularVolumenConov:
-.LFB311:
+	.section .rdata,"dr"
+	.align 8
+.LC64:
+	.ascii "Ingrese el radio de la base del cilindro recto: \0"
+	.align 8
+.LC65:
+	.ascii "Ingrese la altura del cilindro recto: \0"
+	.align 8
+.LC66:
+	.ascii "Superficie del cilindro recto: %.2f\12\0"
+	.align 8
+.LC67:
+	.ascii "Volumen del cilindro recto: %.2f\12\0"
+.LC68:
+	.ascii "Cilindro recto calculado\0"
+	.text
+	.globl	_Z14cilindro_rectoPKc
+	.def	_Z14cilindro_rectoPKc;	.scl	2;	.type	32;	.endef
+	.seh_proc	_Z14cilindro_rectoPKc
+_Z14cilindro_rectoPKc:
+.LFB309:
+	pushq	%rbp
+	.seh_pushreg	%rbp
+	movq	%rsp, %rbp
+	.seh_setframe	%rbp, 0
+	subq	$64, %rsp
+	.seh_stackalloc	64
+	.seh_endprologue
+	movq	%rcx, 16(%rbp)
+	leaq	.LC64(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	-12(%rbp), %rax
+	movq	%rax, %rdx
+	leaq	.LC1(%rip), %rcx
+	call	_Z5scanfPKcz
+	leaq	.LC65(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	-16(%rbp), %rax
+	movq	%rax, %rdx
+	leaq	.LC1(%rip), %rcx
+	call	_Z5scanfPKcz
+	movss	-12(%rbp), %xmm0
+	pxor	%xmm1, %xmm1
+	cvtss2sd	%xmm0, %xmm1
+	movsd	.LC44(%rip), %xmm0
+	mulsd	%xmm0, %xmm1
+	movss	-12(%rbp), %xmm2
+	movss	-16(%rbp), %xmm0
+	addss	%xmm2, %xmm0
+	cvtss2sd	%xmm0, %xmm0
+	mulsd	%xmm1, %xmm0
+	cvtsd2ss	%xmm0, %xmm0
+	movss	%xmm0, -4(%rbp)
+	movss	-12(%rbp), %xmm0
+	pxor	%xmm1, %xmm1
+	cvtss2sd	%xmm0, %xmm1
+	movsd	.LC43(%rip), %xmm0
+	mulsd	%xmm0, %xmm1
+	movss	-12(%rbp), %xmm0
+	cvtss2sd	%xmm0, %xmm0
+	mulsd	%xmm0, %xmm1
+	movss	-16(%rbp), %xmm0
+	cvtss2sd	%xmm0, %xmm0
+	mulsd	%xmm1, %xmm0
+	cvtsd2ss	%xmm0, %xmm0
+	movss	%xmm0, -8(%rbp)
+	pxor	%xmm0, %xmm0
+	cvtss2sd	-4(%rbp), %xmm0
+	movq	%xmm0, %rax
+	movq	%rax, %rdx
+	movq	%rdx, %xmm0
+	movapd	%xmm0, %xmm1
+	movq	%rax, %rdx
+	leaq	.LC66(%rip), %rcx
+	call	_Z6printfPKcz
+	pxor	%xmm0, %xmm0
+	cvtss2sd	-8(%rbp), %xmm0
+	movq	%xmm0, %rax
+	movq	%rax, %rdx
+	movq	%rdx, %xmm0
+	movapd	%xmm0, %xmm1
+	movq	%rax, %rdx
+	leaq	.LC67(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	.LC68(%rip), %rdx
+	movq	16(%rbp), %rcx
+	call	_Z18registrar_bitacoraPKcS0_
+	leaq	.LC7(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	-20(%rbp), %rax
+	movq	%rax, %rdx
+	leaq	.LC1(%rip), %rcx
+	call	_Z5scanfPKcz
+	movss	-20(%rbp), %xmm0
+	movss	.LC8(%rip), %xmm1
+	ucomiss	%xmm1, %xmm0
+	jp	.L98
+	movss	.LC8(%rip), %xmm1
+	ucomiss	%xmm1, %xmm0
+	jne	.L98
+	movq	16(%rbp), %rcx
+	call	_Z4menuPKc
+	jmp	.L97
+.L98:
+	movss	-20(%rbp), %xmm0
+	ucomiss	.LC9(%rip), %xmm0
+	jp	.L101
+	ucomiss	.LC9(%rip), %xmm0
+	jne	.L101
+	leaq	.LC10(%rip), %rcx
+	call	_Z6printfPKcz
+	jmp	.L97
+.L101:
+	leaq	.LC11(%rip), %rcx
+	call	_Z6printfPKcz
+	movq	16(%rbp), %rcx
+	call	_Z4menuPKc
+	nop
+.L97:
+	addq	$64, %rsp
+	popq	%rbp
+	ret
+	.seh_endproc
+	.section .rdata,"dr"
+	.align 8
+.LC69:
+	.ascii "Ingrese el radio de la esfera: \0"
+	.align 8
+.LC72:
+	.ascii "Superficie de la esfera: %.2f\12\0"
+.LC73:
+	.ascii "Volumen de la esfera: %.2f\12\0"
+.LC74:
+	.ascii "Esfera calculada\0"
+	.text
+	.globl	_Z6esferaPKc
+	.def	_Z6esferaPKc;	.scl	2;	.type	32;	.endef
+	.seh_proc	_Z6esferaPKc
+_Z6esferaPKc:
+.LFB310:
 	pushq	%rbp
 	.seh_pushreg	%rbp
 	movq	%rsp, %rbp
@@ -1099,73 +1395,266 @@ _Z19calcularVolumenConov:
 	subq	$48, %rsp
 	.seh_stackalloc	48
 	.seh_endprologue
-	leaq	.LC35(%rip), %rcx
+	movq	%rcx, 16(%rbp)
+	leaq	.LC69(%rip), %rcx
 	call	_Z6printfPKcz
-	leaq	-8(%rbp), %rax
+	leaq	-12(%rbp), %rax
 	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
+	leaq	.LC1(%rip), %rcx
 	call	_Z5scanfPKcz
-	leaq	.LC36(%rip), %rcx
+	movss	-12(%rbp), %xmm0
+	pxor	%xmm1, %xmm1
+	cvtss2sd	%xmm0, %xmm1
+	movsd	.LC70(%rip), %xmm0
+	mulsd	%xmm0, %xmm1
+	movss	-12(%rbp), %xmm0
+	cvtss2sd	%xmm0, %xmm0
+	mulsd	%xmm1, %xmm0
+	cvtsd2ss	%xmm0, %xmm0
+	movss	%xmm0, -4(%rbp)
+	movss	-12(%rbp), %xmm0
+	pxor	%xmm1, %xmm1
+	cvtss2sd	%xmm0, %xmm1
+	movsd	.LC71(%rip), %xmm0
+	mulsd	%xmm0, %xmm1
+	movss	-12(%rbp), %xmm0
+	cvtss2sd	%xmm0, %xmm0
+	mulsd	%xmm0, %xmm1
+	movss	-12(%rbp), %xmm0
+	cvtss2sd	%xmm0, %xmm0
+	mulsd	%xmm1, %xmm0
+	cvtsd2ss	%xmm0, %xmm0
+	movss	%xmm0, -8(%rbp)
+	pxor	%xmm0, %xmm0
+	cvtss2sd	-4(%rbp), %xmm0
+	movq	%xmm0, %rax
+	movq	%rax, %rdx
+	movq	%rdx, %xmm0
+	movapd	%xmm0, %xmm1
+	movq	%rax, %rdx
+	leaq	.LC72(%rip), %rcx
+	call	_Z6printfPKcz
+	pxor	%xmm0, %xmm0
+	cvtss2sd	-8(%rbp), %xmm0
+	movq	%xmm0, %rax
+	movq	%rax, %rdx
+	movq	%rdx, %xmm0
+	movapd	%xmm0, %xmm1
+	movq	%rax, %rdx
+	leaq	.LC73(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	.LC74(%rip), %rdx
+	movq	16(%rbp), %rcx
+	call	_Z18registrar_bitacoraPKcS0_
+	leaq	.LC7(%rip), %rcx
 	call	_Z6printfPKcz
 	leaq	-16(%rbp), %rax
 	movq	%rax, %rdx
-	leaq	.LC11(%rip), %rcx
+	leaq	.LC1(%rip), %rcx
 	call	_Z5scanfPKcz
-	movsd	-8(%rbp), %xmm1
-	movsd	.LC37(%rip), %xmm0
-	mulsd	%xmm0, %xmm1
-	movsd	-8(%rbp), %xmm0
-	mulsd	%xmm0, %xmm1
-	movsd	-16(%rbp), %xmm0
-	mulsd	%xmm1, %xmm0
-	movq	%xmm0, %rax
-	movq	%rax, %xmm0
+	movss	-16(%rbp), %xmm0
+	movss	.LC8(%rip), %xmm1
+	ucomiss	%xmm1, %xmm0
+	jp	.L107
+	movss	.LC8(%rip), %xmm1
+	ucomiss	%xmm1, %xmm0
+	jne	.L107
+	movq	16(%rbp), %rcx
+	call	_Z4menuPKc
+	jmp	.L106
+.L107:
+	movss	-16(%rbp), %xmm0
+	ucomiss	.LC9(%rip), %xmm0
+	jp	.L110
+	ucomiss	.LC9(%rip), %xmm0
+	jne	.L110
+	leaq	.LC10(%rip), %rcx
+	call	_Z6printfPKcz
+	jmp	.L106
+.L110:
+	leaq	.LC11(%rip), %rcx
+	call	_Z6printfPKcz
+	movq	16(%rbp), %rcx
+	call	_Z4menuPKc
+	nop
+.L106:
 	addq	$48, %rsp
 	popq	%rbp
 	ret
 	.seh_endproc
 	.section .rdata,"dr"
 	.align 8
-.LC2:
-	.long	0
-	.long	1071644672
+.LC75:
+	.ascii "Ingrese el radio de la base del cono: \0"
+.LC76:
+	.ascii "Ingrese la altura del cono: \0"
 	.align 8
-.LC9:
-	.long	0
-	.long	1074790400
+.LC78:
+	.ascii "Superficie del cono circular recto: %.2f\12\0"
 	.align 8
-.LC15:
-	.long	0
+.LC79:
+	.ascii "Volumen del cono circular recto: %.2f\12\0"
+.LC80:
+	.ascii "Cono circular recto calculado\0"
+	.text
+	.globl	_Z19cono_circular_rectoPKc
+	.def	_Z19cono_circular_rectoPKc;	.scl	2;	.type	32;	.endef
+	.seh_proc	_Z19cono_circular_rectoPKc
+_Z19cono_circular_rectoPKc:
+.LFB311:
+	pushq	%rbp
+	.seh_pushreg	%rbp
+	movq	%rsp, %rbp
+	.seh_setframe	%rbp, 0
+	subq	$64, %rsp
+	.seh_stackalloc	64
+	.seh_endprologue
+	movq	%rcx, 16(%rbp)
+	leaq	.LC75(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	-16(%rbp), %rax
+	movq	%rax, %rdx
+	leaq	.LC1(%rip), %rcx
+	call	_Z5scanfPKcz
+	leaq	.LC76(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	-20(%rbp), %rax
+	movq	%rax, %rdx
+	leaq	.LC1(%rip), %rcx
+	call	_Z5scanfPKcz
+	movss	-16(%rbp), %xmm1
+	movss	-16(%rbp), %xmm0
+	mulss	%xmm0, %xmm1
+	movss	-20(%rbp), %xmm2
+	movss	-20(%rbp), %xmm0
+	mulss	%xmm2, %xmm0
+	addss	%xmm0, %xmm1
+	movd	%xmm1, %eax
+	movd	%eax, %xmm0
+	call	_ZSt4sqrtf
+	movd	%xmm0, %eax
+	movl	%eax, -4(%rbp)
+	movss	-16(%rbp), %xmm0
+	pxor	%xmm1, %xmm1
+	cvtss2sd	%xmm0, %xmm1
+	movsd	.LC43(%rip), %xmm0
+	mulsd	%xmm0, %xmm1
+	movss	-16(%rbp), %xmm0
+	addss	-4(%rbp), %xmm0
+	cvtss2sd	%xmm0, %xmm0
+	mulsd	%xmm1, %xmm0
+	cvtsd2ss	%xmm0, %xmm0
+	movss	%xmm0, -8(%rbp)
+	movss	-16(%rbp), %xmm0
+	pxor	%xmm1, %xmm1
+	cvtss2sd	%xmm0, %xmm1
+	movsd	.LC77(%rip), %xmm0
+	mulsd	%xmm0, %xmm1
+	movss	-16(%rbp), %xmm0
+	cvtss2sd	%xmm0, %xmm0
+	mulsd	%xmm0, %xmm1
+	movss	-20(%rbp), %xmm0
+	cvtss2sd	%xmm0, %xmm0
+	mulsd	%xmm1, %xmm0
+	cvtsd2ss	%xmm0, %xmm0
+	movss	%xmm0, -12(%rbp)
+	pxor	%xmm0, %xmm0
+	cvtss2sd	-8(%rbp), %xmm0
+	movq	%xmm0, %rax
+	movq	%rax, %rdx
+	movq	%rdx, %xmm0
+	movapd	%xmm0, %xmm1
+	movq	%rax, %rdx
+	leaq	.LC78(%rip), %rcx
+	call	_Z6printfPKcz
+	pxor	%xmm0, %xmm0
+	cvtss2sd	-12(%rbp), %xmm0
+	movq	%xmm0, %rax
+	movq	%rax, %rdx
+	movq	%rdx, %xmm0
+	movapd	%xmm0, %xmm1
+	movq	%rax, %rdx
+	leaq	.LC79(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	.LC80(%rip), %rdx
+	movq	16(%rbp), %rcx
+	call	_Z18registrar_bitacoraPKcS0_
+	leaq	.LC7(%rip), %rcx
+	call	_Z6printfPKcz
+	leaq	-24(%rbp), %rax
+	movq	%rax, %rdx
+	leaq	.LC1(%rip), %rcx
+	call	_Z5scanfPKcz
+	movss	-24(%rbp), %xmm0
+	movss	.LC8(%rip), %xmm1
+	ucomiss	%xmm1, %xmm0
+	jp	.L116
+	movss	.LC8(%rip), %xmm1
+	ucomiss	%xmm1, %xmm0
+	jne	.L116
+	movq	16(%rbp), %rcx
+	call	_Z4menuPKc
+	jmp	.L115
+.L116:
+	movss	-24(%rbp), %xmm0
+	ucomiss	.LC9(%rip), %xmm0
+	jp	.L119
+	ucomiss	.LC9(%rip), %xmm0
+	jne	.L119
+	leaq	.LC10(%rip), %rcx
+	call	_Z6printfPKcz
+	jmp	.L115
+.L119:
+	leaq	.LC11(%rip), %rcx
+	call	_Z6printfPKcz
+	movq	16(%rbp), %rcx
+	call	_Z4menuPKc
+	nop
+.L115:
+	addq	$64, %rsp
+	popq	%rbp
+	ret
+	.seh_endproc
+	.section .rdata,"dr"
+	.align 4
+.LC3:
 	.long	1073741824
 	.align 4
+.LC8:
+	.long	1065353216
+	.align 4
+.LC9:
+	.long	1096810496
+	.align 4
 .LC19:
-	.long	1078530000
+	.long	1082130432
 	.align 8
-.LC24:
-	.long	0
-	.long	1075314688
-	.align 8
-.LC30:
-	.long	-266631570
-	.long	1075388921
-	.align 8
-.LC31:
+.LC43:
 	.long	-266631570
 	.long	1074340345
 	.align 8
-.LC33:
+.LC44:
+	.long	-266631570
+	.long	1075388921
+	.align 4
+.LC54:
+	.long	1086324736
+	.align 8
+.LC70:
 	.long	-266631570
 	.long	1076437497
 	.align 8
-.LC34:
+.LC71:
 	.long	1253901385
 	.long	1074839889
 	.align 8
-.LC37:
+.LC77:
 	.long	1253901385
 	.long	1072742737
 	.ident	"GCC: (tdm64-1) 10.3.0"
 	.def	__mingw_vfscanf;	.scl	2;	.type	32;	.endef
 	.def	__mingw_vfprintf;	.scl	2;	.type	32;	.endef
-	.def	sqrt;	.scl	2;	.type	32;	.endef
+	.def	sqrtf;	.scl	2;	.type	32;	.endef
+	.def	_Z18registrar_bitacoraPKcS0_;	.scl	2;	.type	32;	.endef
+	.def	_Z4menuPKc;	.scl	2;	.type	32;	.endef
 	.def	tan;	.scl	2;	.type	32;	.endef
